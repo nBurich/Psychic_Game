@@ -21,9 +21,13 @@ document.onkeyup = function(event) {
         guesses = 10;
     }   
     else {
-        guesses= guesses - 1;
+        guesses= guesses -1;
         losses ++;
     }
+    if (guesses === 0) {
+        guesses = 10
+    }
+    
     winsText.textContent = "Wins:"+ wins;
     lossesText.textContent = "Losses:" + losses;
     guessesText.textContent = "Guesses Left:" + guesses;
